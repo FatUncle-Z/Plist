@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF985C111F3D51D9006EAAAE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C101F3D51D9006EAAAE /* main.cpp */; };
+		EF985CA21F3DB9D2006EAAAE /* Base64Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C861F3DB9D2006EAAAE /* Base64Helper.cpp */; };
+		EF985CA31F3DB9D2006EAAAE /* PlistBinaryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C891F3DB9D2006EAAAE /* PlistBinaryHelper.cpp */; };
+		EF985CA41F3DB9D2006EAAAE /* PlistBinaryWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C8B1F3DB9D2006EAAAE /* PlistBinaryWriter.cpp */; };
+		EF985CA51F3DB9D2006EAAAE /* Plist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C8D1F3DB9D2006EAAAE /* Plist.cpp */; };
+		EF985CA61F3DB9D2006EAAAE /* PlistDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C901F3DB9D2006EAAAE /* PlistDate.cpp */; };
+		EF985CA71F3DB9D2006EAAAE /* PlistParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C931F3DB9D2006EAAAE /* PlistParser.cpp */; };
+		EF985CA81F3DB9D2006EAAAE /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C951F3DB9D2006EAAAE /* PlistReader.cpp */; };
+		EF985CA91F3DB9D2006EAAAE /* PlistWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C971F3DB9D2006EAAAE /* PlistWriter.cpp */; };
+		EF985CAA1F3DB9D2006EAAAE /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C9B1F3DB9D2006EAAAE /* pugixml.cpp */; };
+		EF985CAB1F3DB9D2006EAAAE /* PlistXMLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C9E1F3DB9D2006EAAAE /* PlistXMLHelper.cpp */; };
+		EF985CAC1F3DB9D2006EAAAE /* PlistXMLWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985CA01F3DB9D2006EAAAE /* PlistXMLWriter.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF985C0B1F3D51D9006EAAAE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF985C0D1F3D51D9006EAAAE /* Plist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Plist; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF985C101F3D51D9006EAAAE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF985C851F3DB9D2006EAAAE /* base64.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = base64.hpp; sourceTree = "<group>"; };
+		EF985C861F3DB9D2006EAAAE /* Base64Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64Helper.cpp; sourceTree = "<group>"; };
+		EF985C871F3DB9D2006EAAAE /* Base64Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Helper.h; sourceTree = "<group>"; };
+		EF985C891F3DB9D2006EAAAE /* PlistBinaryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryHelper.cpp; sourceTree = "<group>"; };
+		EF985C8A1F3DB9D2006EAAAE /* PlistBinaryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryHelper.h; sourceTree = "<group>"; };
+		EF985C8B1F3DB9D2006EAAAE /* PlistBinaryWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryWriter.cpp; sourceTree = "<group>"; };
+		EF985C8C1F3DB9D2006EAAAE /* PlistBinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryWriter.h; sourceTree = "<group>"; };
+		EF985C8D1F3DB9D2006EAAAE /* Plist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plist.cpp; sourceTree = "<group>"; };
+		EF985C8E1F3DB9D2006EAAAE /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		EF985C8F1F3DB9D2006EAAAE /* PlistData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistData.h; sourceTree = "<group>"; };
+		EF985C901F3DB9D2006EAAAE /* PlistDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistDate.cpp; sourceTree = "<group>"; };
+		EF985C911F3DB9D2006EAAAE /* PlistDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDate.h; sourceTree = "<group>"; };
+		EF985C921F3DB9D2006EAAAE /* PlistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistObject.h; sourceTree = "<group>"; };
+		EF985C931F3DB9D2006EAAAE /* PlistParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistParser.cpp; sourceTree = "<group>"; };
+		EF985C941F3DB9D2006EAAAE /* PlistParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistParser.h; sourceTree = "<group>"; };
+		EF985C951F3DB9D2006EAAAE /* PlistReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistReader.cpp; sourceTree = "<group>"; };
+		EF985C961F3DB9D2006EAAAE /* PlistReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistReader.h; sourceTree = "<group>"; };
+		EF985C971F3DB9D2006EAAAE /* PlistWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistWriter.cpp; sourceTree = "<group>"; };
+		EF985C981F3DB9D2006EAAAE /* PlistWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistWriter.h; sourceTree = "<group>"; };
+		EF985C9A1F3DB9D2006EAAAE /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		EF985C9B1F3DB9D2006EAAAE /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		EF985C9C1F3DB9D2006EAAAE /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
+		EF985C9E1F3DB9D2006EAAAE /* PlistXMLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLHelper.cpp; sourceTree = "<group>"; };
+		EF985C9F1F3DB9D2006EAAAE /* PlistXMLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLHelper.h; sourceTree = "<group>"; };
+		EF985CA01F3DB9D2006EAAAE /* PlistXMLWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLWriter.cpp; sourceTree = "<group>"; };
+		EF985CA11F3DB9D2006EAAAE /* PlistXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLWriter.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF985C0A1F3D51D9006EAAAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF985C041F3D51D9006EAAAE = {
+			isa = PBXGroup;
+			children = (
+				EF985C0F1F3D51D9006EAAAE /* Plist */,
+				EF985C0E1F3D51D9006EAAAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF985C0E1F3D51D9006EAAAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C0D1F3D51D9006EAAAE /* Plist */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF985C0F1F3D51D9006EAAAE /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C831F3DB9D2006EAAAE /* Plist */,
+				EF985C101F3D51D9006EAAAE /* main.cpp */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		EF985C831F3DB9D2006EAAAE /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C841F3DB9D2006EAAAE /* base64 */,
+				EF985C881F3DB9D2006EAAAE /* binary */,
+				EF985C8D1F3DB9D2006EAAAE /* Plist.cpp */,
+				EF985C8E1F3DB9D2006EAAAE /* Plist.h */,
+				EF985C8F1F3DB9D2006EAAAE /* PlistData.h */,
+				EF985C901F3DB9D2006EAAAE /* PlistDate.cpp */,
+				EF985C911F3DB9D2006EAAAE /* PlistDate.h */,
+				EF985C921F3DB9D2006EAAAE /* PlistObject.h */,
+				EF985C931F3DB9D2006EAAAE /* PlistParser.cpp */,
+				EF985C941F3DB9D2006EAAAE /* PlistParser.h */,
+				EF985C951F3DB9D2006EAAAE /* PlistReader.cpp */,
+				EF985C961F3DB9D2006EAAAE /* PlistReader.h */,
+				EF985C971F3DB9D2006EAAAE /* PlistWriter.cpp */,
+				EF985C981F3DB9D2006EAAAE /* PlistWriter.h */,
+				EF985C991F3DB9D2006EAAAE /* pugixml */,
+				EF985C9D1F3DB9D2006EAAAE /* xml */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		EF985C841F3DB9D2006EAAAE /* base64 */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C851F3DB9D2006EAAAE /* base64.hpp */,
+				EF985C861F3DB9D2006EAAAE /* Base64Helper.cpp */,
+				EF985C871F3DB9D2006EAAAE /* Base64Helper.h */,
+			);
+			path = base64;
+			sourceTree = "<group>";
+		};
+		EF985C881F3DB9D2006EAAAE /* binary */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C891F3DB9D2006EAAAE /* PlistBinaryHelper.cpp */,
+				EF985C8A1F3DB9D2006EAAAE /* PlistBinaryHelper.h */,
+				EF985C8B1F3DB9D2006EAAAE /* PlistBinaryWriter.cpp */,
+				EF985C8C1F3DB9D2006EAAAE /* PlistBinaryWriter.h */,
+			);
+			path = binary;
+			sourceTree = "<group>";
+		};
+		EF985C991F3DB9D2006EAAAE /* pugixml */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C9A1F3DB9D2006EAAAE /* pugiconfig.hpp */,
+				EF985C9B1F3DB9D2006EAAAE /* pugixml.cpp */,
+				EF985C9C1F3DB9D2006EAAAE /* pugixml.hpp */,
+			);
+			path = pugixml;
+			sourceTree = "<group>";
+		};
+		EF985C9D1F3DB9D2006EAAAE /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				EF985C9E1F3DB9D2006EAAAE /* PlistXMLHelper.cpp */,
+				EF985C9F1F3DB9D2006EAAAE /* PlistXMLHelper.h */,
+				EF985CA01F3DB9D2006EAAAE /* PlistXMLWriter.cpp */,
+				EF985CA11F3DB9D2006EAAAE /* PlistXMLWriter.h */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF985C0C1F3D51D9006EAAAE /* Plist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF985C141F3D51D9006EAAAE /* Build configuration list for PBXNativeTarget "Plist" */;
+			buildPhases = (
+				EF985C091F3D51D9006EAAAE /* Sources */,
+				EF985C0A1F3D51D9006EAAAE /* Frameworks */,
+				EF985C0B1F3D51D9006EAAAE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Plist;
+			productName = Plist;
+			productReference = EF985C0D1F3D51D9006EAAAE /* Plist */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF985C051F3D51D9006EAAAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = zhaojun;
+				TargetAttributes = {
+					EF985C0C1F3D51D9006EAAAE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QK52KGCUT2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF985C081F3D51D9006EAAAE /* Build configuration list for PBXProject "Plist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF985C041F3D51D9006EAAAE;
+			productRefGroup = EF985C0E1F3D51D9006EAAAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF985C0C1F3D51D9006EAAAE /* Plist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF985C091F3D51D9006EAAAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF985CAA1F3DB9D2006EAAAE /* pugixml.cpp in Sources */,
+				EF985CAC1F3DB9D2006EAAAE /* PlistXMLWriter.cpp in Sources */,
+				EF985CA61F3DB9D2006EAAAE /* PlistDate.cpp in Sources */,
+				EF985CAB1F3DB9D2006EAAAE /* PlistXMLHelper.cpp in Sources */,
+				EF985CA71F3DB9D2006EAAAE /* PlistParser.cpp in Sources */,
+				EF985CA41F3DB9D2006EAAAE /* PlistBinaryWriter.cpp in Sources */,
+				EF985CA31F3DB9D2006EAAAE /* PlistBinaryHelper.cpp in Sources */,
+				EF985CA91F3DB9D2006EAAAE /* PlistWriter.cpp in Sources */,
+				EF985CA51F3DB9D2006EAAAE /* Plist.cpp in Sources */,
+				EF985CA21F3DB9D2006EAAAE /* Base64Helper.cpp in Sources */,
+				EF985C111F3D51D9006EAAAE /* main.cpp in Sources */,
+				EF985CA81F3DB9D2006EAAAE /* PlistReader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF985C121F3D51D9006EAAAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF985C131F3D51D9006EAAAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF985C151F3D51D9006EAAAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = QK52KGCUT2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF985C161F3D51D9006EAAAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = QK52KGCUT2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF985C081F3D51D9006EAAAE /* Build configuration list for PBXProject "Plist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF985C121F3D51D9006EAAAE /* Debug */,
+				EF985C131F3D51D9006EAAAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF985C141F3D51D9006EAAAE /* Build configuration list for PBXNativeTarget "Plist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF985C151F3D51D9006EAAAE /* Debug */,
+				EF985C161F3D51D9006EAAAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF985C051F3D51D9006EAAAE /* Project object */;
+}
