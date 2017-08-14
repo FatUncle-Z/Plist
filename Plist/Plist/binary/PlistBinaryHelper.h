@@ -93,14 +93,13 @@ namespace Plist
         }
         
         
+    public:
         static double bytesToDouble(const unsigned char* bytes, bool littleEndian);
         static std::vector<unsigned char> doubleToBytes(double val, bool littleEndian);
         static std::vector<unsigned char> getRange(const unsigned char* origBytes, int64_t index, int64_t size);
         static std::vector<unsigned char> getRange(const std::vector<unsigned char>& origBytes, int64_t index, int64_t size);
         static std::vector<char> getRange(const char* origBytes, int64_t index, int64_t size);
         static std::vector<unsigned char> regulateNullBytes(const std::vector<unsigned char>& origBytes, unsigned int minBytes);
-        
-        static int32_t getCount(const PlistHelperData& d, int bytePosition, unsigned char headerByte, int& startOffset);
     };
 }
 

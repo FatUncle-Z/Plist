@@ -17,6 +17,7 @@ namespace Plist
     {
     public:
         static void base64Encode(std::string& outString, Data inData);
+        static std::vector<char> base64Decode(const char * dataEncoded);
     };
 }
 

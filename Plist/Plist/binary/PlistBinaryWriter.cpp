@@ -305,8 +305,8 @@ namespace Plist
         else if(objType == typeid(bool))
             value = writeBinaryBool(d, obj_cast<const bool&>(obj));
         else {
-            String data = PlistXMLHelper::stringFromValue(obj);
-            value = writeBinaryString(d, data, true);
+            throw Error((std::string("Plist Error: Can't serialize type ") + objType.name()).c_str());
+
         }
         return value;
     }

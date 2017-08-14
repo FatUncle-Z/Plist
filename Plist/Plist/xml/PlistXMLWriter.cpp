@@ -101,7 +101,7 @@ namespace Plist
             node.append_child(value ? "true" : "false");
         }
         else {
-            PlistXMLHelper::writeXMLSimpleNode<String>(node, "string", obj);
+            throw Error((std::string("Plist Error: Can't serialize type ") + objType.name()).c_str());
         }
     }
     

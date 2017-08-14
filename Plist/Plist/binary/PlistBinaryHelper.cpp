@@ -67,21 +67,4 @@ namespace Plist
         
         return bytes;
     }
-    
-    int32_t PlistBinaryHelper::getCount(const PlistHelperData &d, int bytePosition, unsigned char headerByte, int &startOffset)
-    {
-//        unsigned char headerByteTrail = headerByte & 0xf;
-//        if (headerByteTrail < 15)
-//        {
-//            startOffset = 1;
-//            return headerByteTrail;
-//        }
-//        else
-//        {
-//            int32_t count = (int32_t)parseBinaryInt(d, bytePosition + 1, startOffset);
-//            startOffset += 2;
-//            return count;
-//        }
-        return 1;
-    }
 }

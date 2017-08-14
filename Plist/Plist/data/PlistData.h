@@ -11,6 +11,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <iostream>
 #include <stdexcept>
 
 #include "PlistObject.h"
@@ -22,11 +23,7 @@ namespace Plist
     typedef int64_t Integer;
     typedef double Real;
     typedef bool Boolean;
-    
-    typedef std::vector<Object> Array;
-    typedef std::map<std::string, Object> Dictionary;
-    typedef std::vector<char> Data;
-    
+
     
     //for binary data
     struct PlistHelperData

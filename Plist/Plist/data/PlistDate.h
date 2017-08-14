@@ -11,6 +11,7 @@
 
 #include <ctime>
 #include <string>
+#include <iostream>
 
 namespace Plist
 {

@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		EF985C111F3D51D9006EAAAE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C101F3D51D9006EAAAE /* main.cpp */; };
-		EF985CA21F3DB9D2006EAAAE /* Base64Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C861F3DB9D2006EAAAE /* Base64Helper.cpp */; };
-		EF985CA31F3DB9D2006EAAAE /* PlistBinaryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C891F3DB9D2006EAAAE /* PlistBinaryHelper.cpp */; };
-		EF985CA41F3DB9D2006EAAAE /* PlistBinaryWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C8B1F3DB9D2006EAAAE /* PlistBinaryWriter.cpp */; };
-		EF985CA51F3DB9D2006EAAAE /* Plist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C8D1F3DB9D2006EAAAE /* Plist.cpp */; };
-		EF985CA61F3DB9D2006EAAAE /* PlistDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C901F3DB9D2006EAAAE /* PlistDate.cpp */; };
-		EF985CA71F3DB9D2006EAAAE /* PlistParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C931F3DB9D2006EAAAE /* PlistParser.cpp */; };
-		EF985CA81F3DB9D2006EAAAE /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C951F3DB9D2006EAAAE /* PlistReader.cpp */; };
-		EF985CA91F3DB9D2006EAAAE /* PlistWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C971F3DB9D2006EAAAE /* PlistWriter.cpp */; };
-		EF985CAA1F3DB9D2006EAAAE /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C9B1F3DB9D2006EAAAE /* pugixml.cpp */; };
-		EF985CAB1F3DB9D2006EAAAE /* PlistXMLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985C9E1F3DB9D2006EAAAE /* PlistXMLHelper.cpp */; };
-		EF985CAC1F3DB9D2006EAAAE /* PlistXMLWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF985CA01F3DB9D2006EAAAE /* PlistXMLWriter.cpp */; };
+		EFB7272E1F4183F9005FF72D /* Base64Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB7270E1F4183F9005FF72D /* Base64Helper.cpp */; };
+		EFB7272F1F4183F9005FF72D /* PlistBinaryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727111F4183F9005FF72D /* PlistBinaryHelper.cpp */; };
+		EFB727301F4183F9005FF72D /* PlistBinaryReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727131F4183F9005FF72D /* PlistBinaryReader.cpp */; };
+		EFB727311F4183F9005FF72D /* PlistBinaryWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727151F4183F9005FF72D /* PlistBinaryWriter.cpp */; };
+		EFB727321F4183F9005FF72D /* PlistDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727191F4183F9005FF72D /* PlistDate.cpp */; };
+		EFB727331F4183F9005FF72D /* Plist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB7271C1F4183F9005FF72D /* Plist.cpp */; };
+		EFB727341F4183F9005FF72D /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB7271F1F4183F9005FF72D /* PlistReader.cpp */; };
+		EFB727351F4183F9005FF72D /* PlistWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727211F4183F9005FF72D /* PlistWriter.cpp */; };
+		EFB727361F4183F9005FF72D /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727251F4183F9005FF72D /* pugixml.cpp */; };
+		EFB727371F4183F9005FF72D /* PlistXMLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB727281F4183F9005FF72D /* PlistXMLHelper.cpp */; };
+		EFB727381F4183F9005FF72D /* PlistXMLReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB7272A1F4183F9005FF72D /* PlistXMLReader.cpp */; };
+		EFB727391F4183F9005FF72D /* PlistXMLWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFB7272C1F4183F9005FF72D /* PlistXMLWriter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,32 +37,34 @@
 /* Begin PBXFileReference section */
 		EF985C0D1F3D51D9006EAAAE /* Plist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Plist; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF985C101F3D51D9006EAAAE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		EF985C851F3DB9D2006EAAAE /* base64.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = base64.hpp; sourceTree = "<group>"; };
-		EF985C861F3DB9D2006EAAAE /* Base64Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64Helper.cpp; sourceTree = "<group>"; };
-		EF985C871F3DB9D2006EAAAE /* Base64Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Helper.h; sourceTree = "<group>"; };
-		EF985C891F3DB9D2006EAAAE /* PlistBinaryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryHelper.cpp; sourceTree = "<group>"; };
-		EF985C8A1F3DB9D2006EAAAE /* PlistBinaryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryHelper.h; sourceTree = "<group>"; };
-		EF985C8B1F3DB9D2006EAAAE /* PlistBinaryWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryWriter.cpp; sourceTree = "<group>"; };
-		EF985C8C1F3DB9D2006EAAAE /* PlistBinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryWriter.h; sourceTree = "<group>"; };
-		EF985C8D1F3DB9D2006EAAAE /* Plist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plist.cpp; sourceTree = "<group>"; };
-		EF985C8E1F3DB9D2006EAAAE /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
-		EF985C8F1F3DB9D2006EAAAE /* PlistData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistData.h; sourceTree = "<group>"; };
-		EF985C901F3DB9D2006EAAAE /* PlistDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistDate.cpp; sourceTree = "<group>"; };
-		EF985C911F3DB9D2006EAAAE /* PlistDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDate.h; sourceTree = "<group>"; };
-		EF985C921F3DB9D2006EAAAE /* PlistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistObject.h; sourceTree = "<group>"; };
-		EF985C931F3DB9D2006EAAAE /* PlistParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistParser.cpp; sourceTree = "<group>"; };
-		EF985C941F3DB9D2006EAAAE /* PlistParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistParser.h; sourceTree = "<group>"; };
-		EF985C951F3DB9D2006EAAAE /* PlistReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistReader.cpp; sourceTree = "<group>"; };
-		EF985C961F3DB9D2006EAAAE /* PlistReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistReader.h; sourceTree = "<group>"; };
-		EF985C971F3DB9D2006EAAAE /* PlistWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistWriter.cpp; sourceTree = "<group>"; };
-		EF985C981F3DB9D2006EAAAE /* PlistWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistWriter.h; sourceTree = "<group>"; };
-		EF985C9A1F3DB9D2006EAAAE /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
-		EF985C9B1F3DB9D2006EAAAE /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
-		EF985C9C1F3DB9D2006EAAAE /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
-		EF985C9E1F3DB9D2006EAAAE /* PlistXMLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLHelper.cpp; sourceTree = "<group>"; };
-		EF985C9F1F3DB9D2006EAAAE /* PlistXMLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLHelper.h; sourceTree = "<group>"; };
-		EF985CA01F3DB9D2006EAAAE /* PlistXMLWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLWriter.cpp; sourceTree = "<group>"; };
-		EF985CA11F3DB9D2006EAAAE /* PlistXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLWriter.h; sourceTree = "<group>"; };
+		EFB7270D1F4183F9005FF72D /* base64.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = base64.hpp; sourceTree = "<group>"; };
+		EFB7270E1F4183F9005FF72D /* Base64Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64Helper.cpp; sourceTree = "<group>"; };
+		EFB7270F1F4183F9005FF72D /* Base64Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Helper.h; sourceTree = "<group>"; };
+		EFB727111F4183F9005FF72D /* PlistBinaryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryHelper.cpp; sourceTree = "<group>"; };
+		EFB727121F4183F9005FF72D /* PlistBinaryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryHelper.h; sourceTree = "<group>"; };
+		EFB727131F4183F9005FF72D /* PlistBinaryReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryReader.cpp; sourceTree = "<group>"; };
+		EFB727141F4183F9005FF72D /* PlistBinaryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryReader.h; sourceTree = "<group>"; };
+		EFB727151F4183F9005FF72D /* PlistBinaryWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistBinaryWriter.cpp; sourceTree = "<group>"; };
+		EFB727161F4183F9005FF72D /* PlistBinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistBinaryWriter.h; sourceTree = "<group>"; };
+		EFB727181F4183F9005FF72D /* PlistData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistData.h; sourceTree = "<group>"; };
+		EFB727191F4183F9005FF72D /* PlistDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistDate.cpp; sourceTree = "<group>"; };
+		EFB7271A1F4183F9005FF72D /* PlistDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDate.h; sourceTree = "<group>"; };
+		EFB7271B1F4183F9005FF72D /* PlistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistObject.h; sourceTree = "<group>"; };
+		EFB7271C1F4183F9005FF72D /* Plist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plist.cpp; sourceTree = "<group>"; };
+		EFB7271D1F4183F9005FF72D /* Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plist.h; sourceTree = "<group>"; };
+		EFB7271F1F4183F9005FF72D /* PlistReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistReader.cpp; sourceTree = "<group>"; };
+		EFB727201F4183F9005FF72D /* PlistReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistReader.h; sourceTree = "<group>"; };
+		EFB727211F4183F9005FF72D /* PlistWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistWriter.cpp; sourceTree = "<group>"; };
+		EFB727221F4183F9005FF72D /* PlistWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistWriter.h; sourceTree = "<group>"; };
+		EFB727241F4183F9005FF72D /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		EFB727251F4183F9005FF72D /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		EFB727261F4183F9005FF72D /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
+		EFB727281F4183F9005FF72D /* PlistXMLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLHelper.cpp; sourceTree = "<group>"; };
+		EFB727291F4183F9005FF72D /* PlistXMLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLHelper.h; sourceTree = "<group>"; };
+		EFB7272A1F4183F9005FF72D /* PlistXMLReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLReader.cpp; sourceTree = "<group>"; };
+		EFB7272B1F4183F9005FF72D /* PlistXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLReader.h; sourceTree = "<group>"; };
+		EFB7272C1F4183F9005FF72D /* PlistXMLWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLWriter.cpp; sourceTree = "<group>"; };
+		EFB7272D1F4183F9005FF72D /* PlistXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLWriter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,73 +97,83 @@
 		EF985C0F1F3D51D9006EAAAE /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				EF985C831F3DB9D2006EAAAE /* Plist */,
+				EFB7270B1F4183F9005FF72D /* Plist */,
 				EF985C101F3D51D9006EAAAE /* main.cpp */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
 		};
-		EF985C831F3DB9D2006EAAAE /* Plist */ = {
+		EFB7270B1F4183F9005FF72D /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				EF985C841F3DB9D2006EAAAE /* base64 */,
-				EF985C881F3DB9D2006EAAAE /* binary */,
-				EF985C8D1F3DB9D2006EAAAE /* Plist.cpp */,
-				EF985C8E1F3DB9D2006EAAAE /* Plist.h */,
-				EF985C8F1F3DB9D2006EAAAE /* PlistData.h */,
-				EF985C901F3DB9D2006EAAAE /* PlistDate.cpp */,
-				EF985C911F3DB9D2006EAAAE /* PlistDate.h */,
-				EF985C921F3DB9D2006EAAAE /* PlistObject.h */,
-				EF985C931F3DB9D2006EAAAE /* PlistParser.cpp */,
-				EF985C941F3DB9D2006EAAAE /* PlistParser.h */,
-				EF985C951F3DB9D2006EAAAE /* PlistReader.cpp */,
-				EF985C961F3DB9D2006EAAAE /* PlistReader.h */,
-				EF985C971F3DB9D2006EAAAE /* PlistWriter.cpp */,
-				EF985C981F3DB9D2006EAAAE /* PlistWriter.h */,
-				EF985C991F3DB9D2006EAAAE /* pugixml */,
-				EF985C9D1F3DB9D2006EAAAE /* xml */,
+				EFB7270C1F4183F9005FF72D /* base64 */,
+				EFB727101F4183F9005FF72D /* binary */,
+				EFB727171F4183F9005FF72D /* data */,
+				EFB7271C1F4183F9005FF72D /* Plist.cpp */,
+				EFB7271D1F4183F9005FF72D /* Plist.h */,
+				EFB7271F1F4183F9005FF72D /* PlistReader.cpp */,
+				EFB727201F4183F9005FF72D /* PlistReader.h */,
+				EFB727211F4183F9005FF72D /* PlistWriter.cpp */,
+				EFB727221F4183F9005FF72D /* PlistWriter.h */,
+				EFB727231F4183F9005FF72D /* pugixml */,
+				EFB727271F4183F9005FF72D /* xml */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
 		};
-		EF985C841F3DB9D2006EAAAE /* base64 */ = {
+		EFB7270C1F4183F9005FF72D /* base64 */ = {
 			isa = PBXGroup;
 			children = (
-				EF985C851F3DB9D2006EAAAE /* base64.hpp */,
-				EF985C861F3DB9D2006EAAAE /* Base64Helper.cpp */,
-				EF985C871F3DB9D2006EAAAE /* Base64Helper.h */,
+				EFB7270D1F4183F9005FF72D /* base64.hpp */,
+				EFB7270E1F4183F9005FF72D /* Base64Helper.cpp */,
+				EFB7270F1F4183F9005FF72D /* Base64Helper.h */,
 			);
 			path = base64;
 			sourceTree = "<group>";
 		};
-		EF985C881F3DB9D2006EAAAE /* binary */ = {
+		EFB727101F4183F9005FF72D /* binary */ = {
 			isa = PBXGroup;
 			children = (
-				EF985C891F3DB9D2006EAAAE /* PlistBinaryHelper.cpp */,
-				EF985C8A1F3DB9D2006EAAAE /* PlistBinaryHelper.h */,
-				EF985C8B1F3DB9D2006EAAAE /* PlistBinaryWriter.cpp */,
-				EF985C8C1F3DB9D2006EAAAE /* PlistBinaryWriter.h */,
+				EFB727111F4183F9005FF72D /* PlistBinaryHelper.cpp */,
+				EFB727121F4183F9005FF72D /* PlistBinaryHelper.h */,
+				EFB727131F4183F9005FF72D /* PlistBinaryReader.cpp */,
+				EFB727141F4183F9005FF72D /* PlistBinaryReader.h */,
+				EFB727151F4183F9005FF72D /* PlistBinaryWriter.cpp */,
+				EFB727161F4183F9005FF72D /* PlistBinaryWriter.h */,
 			);
 			path = binary;
 			sourceTree = "<group>";
 		};
-		EF985C991F3DB9D2006EAAAE /* pugixml */ = {
+		EFB727171F4183F9005FF72D /* data */ = {
 			isa = PBXGroup;
 			children = (
-				EF985C9A1F3DB9D2006EAAAE /* pugiconfig.hpp */,
-				EF985C9B1F3DB9D2006EAAAE /* pugixml.cpp */,
-				EF985C9C1F3DB9D2006EAAAE /* pugixml.hpp */,
+				EFB727181F4183F9005FF72D /* PlistData.h */,
+				EFB727191F4183F9005FF72D /* PlistDate.cpp */,
+				EFB7271A1F4183F9005FF72D /* PlistDate.h */,
+				EFB7271B1F4183F9005FF72D /* PlistObject.h */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		EFB727231F4183F9005FF72D /* pugixml */ = {
+			isa = PBXGroup;
+			children = (
+				EFB727241F4183F9005FF72D /* pugiconfig.hpp */,
+				EFB727251F4183F9005FF72D /* pugixml.cpp */,
+				EFB727261F4183F9005FF72D /* pugixml.hpp */,
 			);
 			path = pugixml;
 			sourceTree = "<group>";
 		};
-		EF985C9D1F3DB9D2006EAAAE /* xml */ = {
+		EFB727271F4183F9005FF72D /* xml */ = {
 			isa = PBXGroup;
 			children = (
-				EF985C9E1F3DB9D2006EAAAE /* PlistXMLHelper.cpp */,
-				EF985C9F1F3DB9D2006EAAAE /* PlistXMLHelper.h */,
-				EF985CA01F3DB9D2006EAAAE /* PlistXMLWriter.cpp */,
-				EF985CA11F3DB9D2006EAAAE /* PlistXMLWriter.h */,
+				EFB727281F4183F9005FF72D /* PlistXMLHelper.cpp */,
+				EFB727291F4183F9005FF72D /* PlistXMLHelper.h */,
+				EFB7272A1F4183F9005FF72D /* PlistXMLReader.cpp */,
+				EFB7272B1F4183F9005FF72D /* PlistXMLReader.h */,
+				EFB7272C1F4183F9005FF72D /* PlistXMLWriter.cpp */,
+				EFB7272D1F4183F9005FF72D /* PlistXMLWriter.h */,
 			);
 			path = xml;
 			sourceTree = "<group>";
@@ -223,18 +236,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF985CAA1F3DB9D2006EAAAE /* pugixml.cpp in Sources */,
-				EF985CAC1F3DB9D2006EAAAE /* PlistXMLWriter.cpp in Sources */,
-				EF985CA61F3DB9D2006EAAAE /* PlistDate.cpp in Sources */,
-				EF985CAB1F3DB9D2006EAAAE /* PlistXMLHelper.cpp in Sources */,
-				EF985CA71F3DB9D2006EAAAE /* PlistParser.cpp in Sources */,
-				EF985CA41F3DB9D2006EAAAE /* PlistBinaryWriter.cpp in Sources */,
-				EF985CA31F3DB9D2006EAAAE /* PlistBinaryHelper.cpp in Sources */,
-				EF985CA91F3DB9D2006EAAAE /* PlistWriter.cpp in Sources */,
-				EF985CA51F3DB9D2006EAAAE /* Plist.cpp in Sources */,
-				EF985CA21F3DB9D2006EAAAE /* Base64Helper.cpp in Sources */,
+				EFB727361F4183F9005FF72D /* pugixml.cpp in Sources */,
+				EFB727321F4183F9005FF72D /* PlistDate.cpp in Sources */,
+				EFB727371F4183F9005FF72D /* PlistXMLHelper.cpp in Sources */,
+				EFB727311F4183F9005FF72D /* PlistBinaryWriter.cpp in Sources */,
+				EFB7272F1F4183F9005FF72D /* PlistBinaryHelper.cpp in Sources */,
+				EFB7272E1F4183F9005FF72D /* Base64Helper.cpp in Sources */,
+				EFB727351F4183F9005FF72D /* PlistWriter.cpp in Sources */,
+				EFB727301F4183F9005FF72D /* PlistBinaryReader.cpp in Sources */,
+				EFB727331F4183F9005FF72D /* Plist.cpp in Sources */,
+				EFB727391F4183F9005FF72D /* PlistXMLWriter.cpp in Sources */,
 				EF985C111F3D51D9006EAAAE /* main.cpp in Sources */,
-				EF985CA81F3DB9D2006EAAAE /* PlistReader.cpp in Sources */,
+				EFB727341F4183F9005FF72D /* PlistReader.cpp in Sources */,
+				EFB727381F4183F9005FF72D /* PlistXMLReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +379,7 @@
 				EF985C161F3D51D9006EAAAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

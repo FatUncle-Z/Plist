@@ -12,9 +12,19 @@
 #include <typeinfo>
 #include <type_traits>
 #include <stdexcept>
+#include <iostream>
+#include <ostream>
+#include <map>
+#include <vector>
 
 namespace Plist
 {
+    class Object;
+    
+    typedef std::vector<Object> Array;
+    typedef std::map<std::string, Object> Dictionary;
+    typedef std::vector<char> Data;
+    
     class Object
     {
     public:
@@ -63,14 +73,6 @@ namespace Plist
         
         const std::type_info& getType() const { return m_pContent ? m_pContent->getType() : typeid(void); }
         
-        inline friend std::ostream& operator<<(std::ostream& o, const Object& v)
-        {
-            if (v.m_pContent) {
-                v.m_pContent->writeToStream(o);
-            }
-            return o;
-        }
-        
     protected:
         class placeholder
         {
@@ -80,7 +82,6 @@ namespace Plist
         public:
             virtual const std::type_info& getType() const = 0;
             virtual placeholder* clone() const = 0;
-            virtual void writeToStream(std::ostream& o) = 0;
         };
         
         template <typename ValueType>
@@ -97,7 +98,6 @@ namespace Plist
             
             virtual placeholder* clone() const { return new holder(held); }
             
-            virtual void writeToStream(std::ostream& o) { o << held; }
         };
         
     protected:
@@ -160,6 +160,16 @@ namespace Plist
         typedef typename std::remove_reference<ValueType>::type nonref;
         return obj_cast<const nonref &>(const_cast<Object &>(operand));
     }
+    
+    class  bad_obj_cast : public std::bad_cast
+    {
+    public:
+        virtual const char * what() const noexcept
+        {
+            return "boost::bad_any_cast: "
+            "failed conversion using boost::any_cast";
+        }
+    };
 }
 
 #endif /* Object_h */

@@ -9,7 +9,7 @@
 #ifndef PlistBinaryWriter_h
 #define PlistBinaryWriter_h
 
-#include "../PlistData.h"
+#include "../data/PlistData.h"
 
 namespace Plist
 {

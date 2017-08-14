@@ -13,25 +13,52 @@
 #include <fstream>
 
 #include "PlistObject.h"
+#include "PlistData.h"
 
 namespace Plist
 {
     class PlistReader
     {
+    public:
         void readPlist(const char* byteArrayTemp, int64_t size, Object& message);
         void readPlist(std::istream& stream, Object& message);
         
-        template<typename T>
-        void readPlist(const char* byteArray, int64_t size, T& message);
         
-        template<typename T>
-        void readPlist(std::istream& stream, T& message);
+    public:
+        template <typename T>
+        void readPlist(const char* filename, T& message)
+        {
+            std::ifstream stream(filename, std::ios::binary);
+            if(!stream)
+                throw Error("Can't open file.");
+            readPlist(stream, message);
+        }
         
-        template<typename T>
-        void readPlist(const char* filename, T& message);
+        template <typename T>
+        void readPlist(const char* byteArrayTemp, int64_t size, T& message)
+        {
+            Plist::Object tmp_message;
+            readPlist(byteArrayTemp, size, tmp_message);
+            message = obj_cast<T>(tmp_message);
+        }
+        
+        template <typename T>
+        void readPlist(std::istream& stream, T& message)
+        {
+            Plist::Object tmp_message;
+            readPlist(stream, tmp_message);
+            message = obj_cast<T>(tmp_message);
+        }
+        
 #if defined(_MSC_VER)
-        template<typename T>
-        void readPlist(const wchar_t* filename, T& message);
+        template <typename T>
+        void Plist::readPlist(const wchar_t* filename, T& message)
+        {
+            std::ifstream stream(filename, std::ios::binary);
+            if(!stream)
+                throw Error("Can't open file.");
+            readPlist(stream, message);
+        }
 #endif
     };
 }

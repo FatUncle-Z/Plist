@@ -25,7 +25,7 @@ namespace Plist
         {
             pugi::xml_node newNode;
             newNode = node.append_child(name);
-            newNode.append_child(pugi::node_pcdata).set_value(stringFromValue(obj).c_str());
+            newNode.append_child(pugi::node_pcdata).set_value(stringFromValue(obj_cast<T>(obj)).c_str());
         }
         
         template<typename T>
