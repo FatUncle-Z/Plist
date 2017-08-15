@@ -7,6 +7,7 @@
 //
 
 #include <fstream>
+#include <codecvt>
 
 #include "PlistBinaryWriter.h"
 #include "PlistBinaryHelper.h"
@@ -314,6 +315,19 @@ namespace Plist
     std::vector<unsigned char> PlistBinaryWriter::writeBinaryString(Plist::PlistHelperData &d, const std::string &value, bool head)
     {
         std::vector<unsigned char> buffer;
+        if (HasChinese(value.c_str())) {
+            buffer = writeBinaryUnicodeString(d, value, head);
+        }
+        else {
+            buffer = writeBinaryUTF8String(d, value, head);
+        }
+        
+        return buffer;
+    }
+    
+    std::vector<unsigned char> PlistBinaryWriter::writeBinaryUTF8String(Plist::PlistHelperData &d, const std::string &value, bool head)
+    {
+        std::vector<unsigned char> buffer;
         buffer.reserve(value.size());
         
         for(std::string::const_iterator it = value.begin();
@@ -340,6 +354,37 @@ namespace Plist
         return buffer;
     }
     
+    std::vector<unsigned char> PlistBinaryWriter::writeBinaryUnicodeString(Plist::PlistHelperData &d, const std::string &value, bool head)
+    {
+        std::vector<unsigned char> buffer;
+        buffer.reserve(value.size());
+        
+        std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> converter;
+        std::wstring wstr = converter.from_bytes(value);
+        for(std::wstring::const_iterator it = wstr.begin(); it != wstr.end(); ++it) {
+            buffer.push_back((unsigned char) *it);
+        }
+        
+        if(head)
+        {
+            std::vector<unsigned char> header;
+            if (value.length() < 15)
+                header.push_back(0x60 | ((unsigned char) value.length()));
+            else
+            {
+                header.push_back(0x60 | 0xf);
+                std::vector<unsigned char> theSize = writeBinaryInteger(d, buffer.size(), false);
+                header.insert(header.end(), theSize.begin(), theSize.end());
+            }
+            buffer.insert(buffer.begin(), header.begin(), header.end());
+        }
+        
+        d._objectTable.insert(d._objectTable.begin(), buffer.begin(), buffer.end());
+        
+        return buffer;
+    }
+    
+    
     void Plist::PlistBinaryWriter::writePlistBinary(std::ostream &stream, const Plist::Object &message)
     {
         PlistHelperData d;
@@ -360,6 +405,22 @@ namespace Plist
         std::ofstream stream(filename, std::ios::binary);
         writePlistBinary(stream, message);
         stream.close();
+    }
+    
+    bool PlistBinaryWriter::HasChinese(const char *str)
+    {
+        bool nRet = false;
+        char c;
+        while((c=*str++))
+        {
+            //If the character height is 1 and the next character height is 1, there is a Chinese character
+            if( (c&0x80) && (*str & 0x80) )
+            {
+                nRet = true;
+                break;
+            }
+        }
+        return nRet;
     }
     
 #if defined(_MSC_VER)
