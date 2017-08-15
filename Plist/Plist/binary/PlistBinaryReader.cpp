@@ -181,20 +181,30 @@ namespace Plist
         
         std::vector<unsigned char> characterBytes = PlistBinaryHelper::getRange(d._objectTable, charStartPosition, charCount * 2);
         
+        std::vector<std::vector<unsigned char>> unicodeBytes;
+        unicodeBytes.reserve(characterBytes.size() / 2);
+        
         if (PlistBinaryHelper::hostLittleEndian()) {
             if (! characterBytes.empty()) {
-                for (std::size_t i = 0, n = characterBytes.size(); i < n - 1; i += 2)
+                for (std::size_t i = 0, n = characterBytes.size(); i < n - 1; i += 2) {
                     std::swap(characterBytes[i], characterBytes[i + 1]);
+                    std::vector<unsigned char> unicode;
+                    unicode.reserve(2);
+                    unicode.emplace_back(characterBytes[i]);
+                    unicode.emplace_back(characterBytes[i+1]);
+                    unicodeBytes.emplace_back(unicode);
+                }
             }
         }
         
-        wchar_t *u16chars = (wchar_t*) PlistBinaryHelper::vecData(characterBytes);
-        std::size_t u16len = characterBytes.size() / 2;
+        std::string ret;
+        std::wstring_convert<std::codecvt_utf8<char16_t>, char16_t> converter;
+        for (int i = 0; i < unicodeBytes.size(); ++i){
+            int16_t *u16chars = (int16_t*) PlistBinaryHelper::vecData(unicodeBytes[i]);
+            ret.append(converter.to_bytes(*u16chars).c_str());
+        }
         
-        std::wstring str = std::wstring(*u16chars, u16len);
-        std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> converter;
-        return converter.to_bytes(str);
-        return "";
+        return ret;
     }
     
     Data PlistBinaryReader::parseBinaryByteArray(const Plist::PlistHelperData &d, int headerPosition)

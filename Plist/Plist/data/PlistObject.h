@@ -150,7 +150,7 @@ namespace Plist
     {
         typedef typename std::remove_reference<ValueType>::type nonref;
         nonref* result = obj_cast<nonref>(&operand);
-        typedef typename std::conditional<std::is_reference<ValueType>::value, ValueType, typename std::add_lvalue_reference<ValueType>>::type ref_type;
+        typedef typename std::conditional<std::is_reference<ValueType>::value, ValueType, typename std::add_lvalue_reference<ValueType>::type>::type ref_type;
         return static_cast<ref_type>(*result);;
     }
     
