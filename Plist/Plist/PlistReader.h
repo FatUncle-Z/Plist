@@ -12,8 +12,8 @@
 #include <iostream>
 #include <fstream>
 
-#include "PlistObject.h"
-#include "PlistData.h"
+#include "data/PlistObject.h"
+#include "data/PlistData.h"
 
 namespace Plist
 {

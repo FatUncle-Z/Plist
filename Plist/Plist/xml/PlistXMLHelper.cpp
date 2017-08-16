@@ -7,7 +7,7 @@
 //
 
 #include "PlistXMLHelper.h"
-#include "base64.hpp"
+#include "../base64/base64.hpp"
 namespace Plist
 {
     

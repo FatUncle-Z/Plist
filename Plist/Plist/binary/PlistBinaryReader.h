@@ -9,7 +9,7 @@
 #ifndef PlistBinaryReader_h
 #define PlistBinaryReader_h
 
-#include "PlistData.h"
+#include "../data/PlistData.h"
 
 namespace Plist
 {

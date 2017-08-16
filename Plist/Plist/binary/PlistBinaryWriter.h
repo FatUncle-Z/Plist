@@ -46,7 +46,14 @@ namespace Plist
 #if defined(_MSC_VER)
         void writePlistBinary(const wchar_t* filename, const Object& message);
 #endif
-        
+        char *C2W(wchar_t w_cn , char c_cn[2])
+        {
+            //following code convert wchar to char
+            c_cn[0] = w_cn >> 8 ;
+            c_cn[1] = w_cn ;
+            c_cn[2] = '\0';
+            return c_cn ;
+        }
     };
 }
 

@@ -11,7 +11,7 @@
 
 #include <sstream>
 
-#include "PlistData.h"
+#include "../data/PlistData.h"
 #include "../pugixml/pugixml.hpp"
 
 namespace Plist

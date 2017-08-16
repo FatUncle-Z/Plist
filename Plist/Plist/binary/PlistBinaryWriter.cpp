@@ -8,6 +8,7 @@
 
 #include <fstream>
 #include <codecvt>
+#include <stdlib.h>
 
 #include "PlistBinaryWriter.h"
 #include "PlistBinaryHelper.h"
@@ -358,18 +359,18 @@ namespace Plist
     {
         std::vector<unsigned char> buffer;
         buffer.reserve(value.size());
-        
         std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> converter;
         std::wstring wstr = converter.from_bytes(value);
         for(std::wstring::const_iterator it = wstr.begin(); it != wstr.end(); ++it) {
-            buffer.push_back((unsigned char) *it);
+            buffer.push_back(*it>>8);
+            buffer.push_back(*it);
         }
         
         if(head)
         {
             std::vector<unsigned char> header;
             if (value.length() < 15)
-                header.push_back(0x60 | ((unsigned char) value.length()));
+                header.push_back(0x60 | ((unsigned char) wstr.length()));
             else
             {
                 header.push_back(0x60 | 0xf);

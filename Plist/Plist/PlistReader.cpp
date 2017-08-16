@@ -8,9 +8,9 @@
 
 #include "PlistReader.h"
 #include "binary/PlistBinaryHelper.h"
+#include "binary/PlistBinaryReader.h"
 #include "pugixml/pugixml.hpp"
 #include "xml/PlistXMLReader.h"
-#include "binary/PlistBinaryReader.h"
 
 namespace Plist
 {
