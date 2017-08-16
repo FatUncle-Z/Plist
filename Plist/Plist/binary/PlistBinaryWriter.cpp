@@ -12,7 +12,6 @@
 
 #include "PlistBinaryWriter.h"
 #include "PlistBinaryHelper.h"
-#include "../xml/PlistXMLHelper.h"
 
 namespace Plist
 {
