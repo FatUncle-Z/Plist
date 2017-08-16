@@ -8,7 +8,6 @@
 
 #include <fstream>
 #include <codecvt>
-#include <stdlib.h>
 
 #include "PlistBinaryWriter.h"
 #include "PlistBinaryHelper.h"
