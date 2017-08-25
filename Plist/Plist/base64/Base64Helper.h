@@ -9,7 +9,7 @@
 #ifndef Base64Helper_h
 #define Base64Helper_h
 
-#include "PlistData.h"
+#include "../data/PlistData.h"
 
 namespace Plist
 {

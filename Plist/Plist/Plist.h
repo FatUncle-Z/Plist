@@ -9,7 +9,7 @@
 #ifndef Plist_h
 #define Plist_h
 
-#include "PlistData.h"
+#include "data/PlistData.h"
 
 namespace Plist {
     
