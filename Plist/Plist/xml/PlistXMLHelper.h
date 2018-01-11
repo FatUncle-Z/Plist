@@ -13,6 +13,7 @@
 
 #include "../data/PlistData.h"
 #include "../pugixml/pugixml.hpp"
+#include "../utils/PlistUtils.h"
 
 namespace Plist
 {
@@ -25,15 +26,7 @@ namespace Plist
         {
             pugi::xml_node newNode;
             newNode = node.append_child(name);
-            newNode.append_child(pugi::node_pcdata).set_value(stringFromValue(obj_cast<T>(obj)).c_str());
-        }
-        
-        template<typename T>
-        inline static std::string stringFromValue(const T& value)
-        {
-            std::stringstream ss;
-            ss<<value;
-            return ss.str();
+            newNode.append_child(pugi::node_pcdata).set_value(PlistUtils::stringFromValue(obj_cast<T>(obj)).c_str());
         }
     };
 }

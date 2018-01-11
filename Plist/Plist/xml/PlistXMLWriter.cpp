@@ -81,14 +81,12 @@ namespace Plist
             writeXMLDictionary(node, obj_cast<const Dictionary&>(obj));
         else if(objType == typeid(String))
             PlistXMLHelper::writeXMLSimpleNode<String>(node, "string", obj);
+        else if (objType == typeid(char*))
+            PlistXMLHelper::writeXMLSimpleNode<char*>(node, "string", obj);
+        else if (objType == typeid(const char*))
+            PlistXMLHelper::writeXMLSimpleNode<const char*>(node, "string", obj);
         else if(objType == typeid(Array))
             writeXMLArray(node, obj_cast<const Array&>(obj));
-        else if(objType == typeid(Data))
-        {
-            std::string dataEncoded ;
-            Base64Helper::base64Encode(dataEncoded, obj_cast<const Data&>(obj));
-            PlistXMLHelper::writeXMLSimpleNode<std::string>(node, "data", dataEncoded);
-        }
         else if(objType == typeid(double))
             PlistXMLHelper::writeXMLSimpleNode<double>(node, "real", obj);
         else if(objType == typeid(float))
@@ -96,9 +94,12 @@ namespace Plist
         else if(objType == typeid(Date))
             PlistXMLHelper::writeXMLSimpleNode<std::string>(node, "date", obj_cast<const Date&>(obj).timeAsXMLConvention());
         else if(objType == typeid(bool))
+            node.append_child(obj_cast<const bool&>(obj) ? "true" : "false");
+        else if(objType == typeid(Data))
         {
-            bool value = obj_cast<const bool&>(obj);
-            node.append_child(value ? "true" : "false");
+            std::string dataEncoded ;
+            Base64Helper::base64Encode(dataEncoded, obj_cast<const Data&>(obj));
+            PlistXMLHelper::writeXMLSimpleNode<std::string>(node, "data", dataEncoded);
         }
         else {
             throw Error((std::string("Plist Error: Can't serialize type ") + objType.name()).c_str());

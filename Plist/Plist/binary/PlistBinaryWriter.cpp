@@ -11,6 +11,7 @@
 
 #include "PlistBinaryWriter.h"
 #include "PlistBinaryHelper.h"
+#include "../utils/PlistUtils.h"
 
 namespace Plist
 {
@@ -292,6 +293,10 @@ namespace Plist
             value = writeBinaryDictionary(d, obj_cast<const Dictionary& >(obj));
         else if(objType == typeid(String))
             value = writeBinaryString(d, obj_cast<const String&>(obj), true);
+        else if (objType == typeid(char*))
+            value = writeBinaryString(d, PlistUtils::stringFromValue(obj_cast<char*>(obj)), true);
+        else if (objType == typeid(const char*))
+            value = writeBinaryString(d, PlistUtils::stringFromValue(obj_cast<const char*>(obj)), true);
         else if(objType == typeid(Array))
             value = writeBinaryArray(d, obj_cast<const Array& >(obj));
         else if(objType == typeid(Data))
@@ -304,7 +309,8 @@ namespace Plist
             value = writeBinaryDate(d, obj_cast<const Date&>(obj));
         else if(objType == typeid(bool))
             value = writeBinaryBool(d, obj_cast<const bool&>(obj));
-        else {
+        else
+        {
             throw Error((std::string("Plist Error: Can't serialize type ") + objType.name()).c_str());
 
         }

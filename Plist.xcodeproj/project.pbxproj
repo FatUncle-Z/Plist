@@ -65,6 +65,7 @@
 		EFB7272B1F4183F9005FF72D /* PlistXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLReader.h; sourceTree = "<group>"; };
 		EFB7272C1F4183F9005FF72D /* PlistXMLWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistXMLWriter.cpp; sourceTree = "<group>"; };
 		EFB7272D1F4183F9005FF72D /* PlistXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistXMLWriter.h; sourceTree = "<group>"; };
+		EFE33040200738B8000A1BD3 /* PlistUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 		EFB7270B1F4183F9005FF72D /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				EFE3303F200738A4000A1BD3 /* utils */,
 				EFB7270C1F4183F9005FF72D /* base64 */,
 				EFB727101F4183F9005FF72D /* binary */,
 				EFB727171F4183F9005FF72D /* data */,
@@ -176,6 +178,14 @@
 				EFB7272D1F4183F9005FF72D /* PlistXMLWriter.h */,
 			);
 			path = xml;
+			sourceTree = "<group>";
+		};
+		EFE3303F200738A4000A1BD3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				EFE33040200738B8000A1BD3 /* PlistUtils.h */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
