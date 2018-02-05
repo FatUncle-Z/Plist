@@ -35,7 +35,9 @@ namespace Plist
         std::vector<unsigned char> writeBinaryString(PlistHelperData& d, const std::string& value, bool head);
         
         std::vector<unsigned char> writeBinaryUTF8String(PlistHelperData& d, const std::string& value, bool head);
+        
         std::vector<unsigned char> writeBinaryUnicodeString(PlistHelperData& d, const std::string& value, bool head);
+        std::vector<unsigned char> writeBinaryUnicodeWString(Plist::PlistHelperData &d, const std::wstring &value, bool head);
 
         //Return false: no Chinese, return true: there is Chinese
         bool HasChinese(const char *str);

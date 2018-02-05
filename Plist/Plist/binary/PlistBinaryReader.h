@@ -8,6 +8,7 @@
 
 #ifndef PlistBinaryReader_h
 #define PlistBinaryReader_h
+#include <codecvt>
 
 #include "../data/PlistData.h"
 
@@ -15,6 +16,13 @@ namespace Plist
 {
     class PlistBinaryReader
     {
+    private:
+#if _MSC_VER && _MSC_VER >= 1900
+        std::wstring_convert<std::codecvt_utf8<int16_t>, int16_t> converter;
+#else
+        std::wstring_convert<std::codecvt_utf8<char16_t>, char16_t> converter;
+#endif
+        
     private:
         Object parseBinary(const PlistHelperData& d, int objRef);
         Dictionary  parseBinaryDictionary(const PlistHelperData& d, int objRef);

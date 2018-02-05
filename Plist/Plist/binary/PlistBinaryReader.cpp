@@ -6,7 +6,7 @@
 //  Copyright © 2017年 zhaojun. All rights reserved.
 //
 #include <sstream>
-#include <codecvt>
+
 
 #include "PlistBinaryReader.h"
 #include "PlistBinaryHelper.h"
@@ -181,29 +181,18 @@ namespace Plist
         
         std::vector<unsigned char> characterBytes = PlistBinaryHelper::getRange(d._objectTable, charStartPosition, charCount * 2);
         
-        std::vector<std::vector<unsigned char>> unicodeBytes;
-        unicodeBytes.reserve(characterBytes.size() / 2);
-        
+        std::string ret;
         if (PlistBinaryHelper::hostLittleEndian()) {
             if (! characterBytes.empty()) {
                 for (std::size_t i = 0, n = characterBytes.size(); i < n - 1; i += 2) {
-                    std::swap(characterBytes[i], characterBytes[i + 1]);
-                    std::vector<unsigned char> unicode;
-                    unicode.reserve(2);
-                    unicode.emplace_back(characterBytes[i]);
-                    unicode.emplace_back(characterBytes[i+1]);
-                    unicodeBytes.emplace_back(unicode);
+                    unsigned char* unicode = new unsigned char();
+                    unicode[0] = characterBytes[i+1];
+                    unicode[1] = characterBytes[i];
+                    ret.append(converter.to_bytes(*(int16_t*) unicode).c_str());
+                    delete unicode;
                 }
             }
         }
-        
-        std::string ret;
-        std::wstring_convert<std::codecvt_utf8<char16_t>, char16_t> converter;
-        for (int i = 0; i < unicodeBytes.size(); ++i){
-            int16_t *u16chars = (int16_t*) PlistBinaryHelper::vecData(unicodeBytes[i]);
-            ret.append(converter.to_bytes(*u16chars).c_str());
-        }
-        
         return ret;
     }
     

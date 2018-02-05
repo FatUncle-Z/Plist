@@ -68,6 +68,10 @@ namespace Plist
             return *this;
         }
         
+        template <typename T>
+        bool isType() {
+            return getType() == typeid(T);
+        }
     public:
         bool isEmpth() const { return !m_pContent; }
         

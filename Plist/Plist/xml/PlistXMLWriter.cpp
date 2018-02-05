@@ -85,6 +85,23 @@ namespace Plist
             PlistXMLHelper::writeXMLSimpleNode<char*>(node, "string", obj);
         else if (objType == typeid(const char*))
             PlistXMLHelper::writeXMLSimpleNode<const char*>(node, "string", obj);
+        else if (objType == typeid(std::wstring)){
+            std::string tmp;
+            Plist::PlistUtils::WCharStringToUTF8String(obj_cast<std::wstring>(obj), tmp);
+            PlistXMLHelper::writeXMLSimpleNode<String>(node, "string", tmp);
+        }
+        else if (objType == typeid(wchar_t*))
+        {
+            std::string tmp;
+            Plist::PlistUtils::WCharStringToUTF8String(obj_cast<wchar_t*>(obj), tmp);
+            PlistXMLHelper::writeXMLSimpleNode<String>(node, "string", tmp);
+        }
+        else if (objType == typeid(const wchar_t*))
+        {
+            std::string tmp;
+            Plist::PlistUtils::WCharStringToUTF8String(obj_cast<const wchar_t*>(obj), tmp);
+            PlistXMLHelper::writeXMLSimpleNode<String>(node, "string", tmp);
+        }
         else if(objType == typeid(Array))
             writeXMLArray(node, obj_cast<const Array&>(obj));
         else if(objType == typeid(double))

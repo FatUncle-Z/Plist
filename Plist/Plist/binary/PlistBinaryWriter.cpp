@@ -297,6 +297,12 @@ namespace Plist
             value = writeBinaryString(d, PlistUtils::stringFromValue(obj_cast<char*>(obj)), true);
         else if (objType == typeid(const char*))
             value = writeBinaryString(d, PlistUtils::stringFromValue(obj_cast<const char*>(obj)), true);
+        else if (objType == typeid(std::wstring))
+            value = writeBinaryUnicodeWString(d, obj_cast<std::wstring>(obj), true);
+        else if (objType == typeid(wchar_t*))
+            value = writeBinaryUnicodeWString(d, obj_cast<wchar_t*>(obj), true);
+        else if (objType == typeid(const wchar_t*))
+            value = writeBinaryUnicodeWString(d, obj_cast<const wchar_t*>(obj), true);
         else if(objType == typeid(Array))
             value = writeBinaryArray(d, obj_cast<const Array& >(obj));
         else if(objType == typeid(Data))
@@ -312,7 +318,6 @@ namespace Plist
         else
         {
             throw Error((std::string("Plist Error: Can't serialize type ") + objType.name()).c_str());
-
         }
         return value;
     }
@@ -359,13 +364,11 @@ namespace Plist
         return buffer;
     }
     
-    std::vector<unsigned char> PlistBinaryWriter::writeBinaryUnicodeString(Plist::PlistHelperData &d, const std::string &value, bool head)
+    std::vector<unsigned char> PlistBinaryWriter::writeBinaryUnicodeWString(Plist::PlistHelperData &d, const std::wstring &value, bool head)
     {
         std::vector<unsigned char> buffer;
         buffer.reserve(value.size());
-        std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> converter;
-        std::wstring wstr = converter.from_bytes(value);
-        for(std::wstring::const_iterator it = wstr.begin(); it != wstr.end(); ++it) {
+        for(std::wstring::const_iterator it = value.begin(); it != value.end(); ++it) {
             buffer.push_back(*it>>8);
             buffer.push_back(*it);
         }
@@ -374,7 +377,7 @@ namespace Plist
         {
             std::vector<unsigned char> header;
             if (value.length() < 15)
-                header.push_back(0x60 | ((unsigned char) wstr.length()));
+                header.push_back(0x60 | ((unsigned char) value.length()));
             else
             {
                 header.push_back(0x60 | 0xf);
@@ -387,6 +390,15 @@ namespace Plist
         d._objectTable.insert(d._objectTable.begin(), buffer.begin(), buffer.end());
         
         return buffer;
+    }
+    
+    std::vector<unsigned char> PlistBinaryWriter::writeBinaryUnicodeString(Plist::PlistHelperData &d, const std::string &value, bool head)
+    {
+        std::vector<unsigned char> buffer;
+        buffer.reserve(value.size());
+        std::wstring wstr;
+        Plist::PlistUtils::UTF8StringToWCharString(value, wstr);
+        return writeBinaryUnicodeWString(d, wstr, head);
     }
     
     
